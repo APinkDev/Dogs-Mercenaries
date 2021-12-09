@@ -1,0 +1,71 @@
+.Home_Background{
+    height: 100vh;
+  background-image: url("https://i.pinimg.com/originals/64/1d/83/641d83bce5c60dd2c57b9db5fd533306.jpg");
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+}
+
+.Home_Top{
+  /* border: 1px solid #111; */
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(132, 185, 231, 0.493);
+}
+
+.Home__back{
+  position: absolute;
+}
+.Home_search__title{
+  /* border: 1px solid #111; */
+  width: 340px;
+}
+
+.Home_Right{
+  display: flex;
+  /* border: 1px solid #111; */
+}
+.Home__paginate{
+  display: inline;
+}
+.Home__pagination__li{
+  display: flex;
+}
+.Home__back{
+  padding: 10px;
+  font-size: 1.2rem;
+}
+.Home_Right__Top{
+  display: flex;
+  /* margin: 40px; */
+}
+.Home_Right__filtred{
+  margin: 20px
+}
+.Home_Right__create__text{
+  margin: 20px;
+  color: rgb(0, 0, 0);
+  font-size: 4.5vh;
+  width: 20vh;
+  height: 7vh;
+  text-align: center;
+  background-color: #aaaaaa;
+  border: 1px solid #000000;
+  border-radius: 15px;
+}
+.Home_Right__create__text:hover{
+  color: rgb(80, 80, 80);
+}
+.Home__Icon{
+  position: absolute;
+  left: 35rem;
+  font-size: 4.5rem;
+  text-decoration: none;
+  border: 1px #00000000;
+  background-color: #00000000;
+}
+.Home__Icon:hover{
+  transition: all 0.5s;
+  background-color: #000000;
+  border-radius: 2rem;
+}

@@ -1,0 +1,92 @@
+body,
+html {
+  top: 0;
+  margin: 0;
+  height: 20vh;
+  cursor: crosshair;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+h1,
+h2 {
+  margin: 0;
+}
+
+.Background_Start {
+  height: 100vh;
+  background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190622/ourmid/pngtree-cartoon-cute-minimalist-pet-dog-poster-background-image_232424.jpg");
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  display: Flex;
+  justify-content: space-between;
+}
+
+.Text__Warning {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.4em;
+  line-height: 1.7;
+  border: 0.2rem solid rgba(255, 255, 255, 0);
+  background-color: rgba(183, 153, 190, 0.623);
+  backdrop-filter: blur(80%);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 40px;
+}
+
+.start__left {
+  width: 80vh;
+  height: 100vh;
+  align-self: center;
+  /* border: 1rem solid #111; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start__right {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 120vh;
+  /* border: 1rem solid #111; */
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.start__title {
+  display: flex;
+}
+.start__title__title {
+  font-size:  14vh;
+  font-family: 'Bebas Neue', cursive;
+  border: 1px solid rgba(17, 17, 17, 0);
+  background-color: rgba(148, 8, 153, 0.692);
+  border-width: 1rem;
+  border-radius: 4rem;
+}
+
+.start__start__butom{
+  /* height: 10vh;
+  width: 10vh; */
+  border-radius: 40rem;
+  font-size: 40vh;
+  /* text-decoration: none; */
+  color: #B347AC;
+}
+
+.start__start__butom:hover{
+  transition: all 0.3s;
+  border: 5px solid #111;
+  padding: 35px;
+  border-radius: 40rem;
+}
+
+.start__text__text{
+  font-size: 20vh;
+}

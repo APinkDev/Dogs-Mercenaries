@@ -1,0 +1,131 @@
+.Background__create{
+    height: 100vh;
+    background-image: url("https://i.pinimg.com/originals/45/b8/af/45b8afa46e5c75098b842df07f0b532c.jpg");
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+.Create__title__top{
+    font-family: 'Architects Daughter', cursive;
+    font-size: 10rem;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-color:#deb1e988;
+    padding: 40px;
+    border-radius: 10rem;   
+}
+
+.Create__title__top__text{
+    font-family: 'Architects Daughter', cursive;
+    background-color:#eccaf594;
+    font-weight: bold;
+    display: inline-block;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-left: 4rem;
+    border-radius: 1rem;
+    padding: 10px;
+}
+
+.Create__Text{
+    width: 80.5rem;
+    height: 4rem;
+    margin: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+.Create__maxyears{
+    left: 1rem;
+    width: 11rem;
+    height: 5rem;
+    margin: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+.Create__minyears{
+    width: 11rem;
+    height: 5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    margin-left: 2.2rem;
+    text-align: center;
+}
+
+
+.Create__minweight{
+    width: 11rem;
+    height: 5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.Create__maxweight{
+    width: 11rem;
+    height: 5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.Create__minheight{
+    width: 11rem;
+    height: 5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.Create__maxheight{
+    width: 11rem;
+    text-align: center;
+    height: 5rem;
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+.Create__URL{
+    width: 40rem;
+    height: 4rem;
+    margin: 2rem;
+    font-size: 2rem;
+}
+
+.Create__temperament{
+    width: 15rem;
+    height: 4rem;
+    margin: 2rem;
+    font-size: 2rem;
+}
+
+.Create__Create{
+    width: 6rem;
+    height: 4rem;
+    margin: 2rem;
+    border-radius: 2rem;
+    font-size: 2rem;
+}
+.Create__Create:hover{
+    transition: all 0.5s;
+    color: #D6B3EB;
+    background-color:#000000b7;
+    font-size: 2rem;
+}
+
+.Create__HomeButtom{
+    width: 6rem;
+    height: 4rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+}
+.Create__HomeButtom:hover{
+    transition: all 0.5s;
+    color: #00307eb7;
+    background-color: #D6B3EB;
+}
