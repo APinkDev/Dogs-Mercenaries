@@ -4,7 +4,8 @@ const { DogCreated } = require("./db.js");
 
 module.exports = {
   askByName: (name) => {
-    let cont = axios.get(`https://api.thedogapi.com/v1/breeds/search?q=${name}`)
+    let cont = axios
+      .get(`https://api.thedogapi.com/v1/breeds/search?q=${name}`)
       .then((resultado) => (resultado = resultado.data))
       //   .then((result) => (console.log(result)))
       .then((resort) => {
@@ -24,6 +25,24 @@ module.exports = {
         // console.log("AAAAAAAAAA", cont);
         return amigo;
       });
+    return cont;
+  },
+
+  askById: (id) => {
+    let cont = axios
+      .get(`https://api.thedogapi.com/v1/breeds`)
+      .then((resultado) => (resultado = resultado.data))
+      .then((resort) => {
+        let amigo = [];
+        resort.map((elm) =>
+          amigo.push({
+            id: elm.id,
+          })
+        );
+        console.log("AAAAAAAAAA", cont);
+        return amigo;
+      });
+
     return cont;
   },
 
@@ -48,23 +67,5 @@ module.exports = {
     } catch (e) {
       console.log("error", e);
     }
-  },
-
-  askById: (id) => {
-    let cont = axios
-      .get(`https://api.thedogapi.com/v1/breeds`)
-      .then((resultado) => (resultado = resultado.data))
-      .then((resort) => {
-        let amigo = [];
-        resort.map((elm) =>
-          amigo.push({
-            id: elm.id,
-          })
-        );
-        console.log("AAAAAAAAAA", cont);
-        return amigo;
-      });
-
-    return cont;
   },
 };

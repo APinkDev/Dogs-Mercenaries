@@ -12,27 +12,32 @@ export const DogsAll = () => {
   };
 };
 
-// export const SearchDog = (arg) => {
+export const SearchDog = (arg) => {
+  return async (dispatch) => {
+    const response = await axios.get(`http://localhost:3001/dogs?name=${arg}`);
+    if (response?.data) {
+      dispatch({
+        type: "DOGSALL",
+        payload: { dogs: response.data },
+      });
+    }
+  };
+};
+
+// export const SearchDog = (arg) => { 
 //   return async (dispatch) => {
-//     const response = await axios.get(`http://localhost:3001/dogs?name=${arg}`);
-//     if (response?.data) {
-//       dispatch({
-//         type: "DOGSALL",
-//         payload: { dogs: response.data },
-//       });
+//     try {
+//       const result = await fetch(`http://localhost:3001/dogs?name=${arg}`);
+//       const r = result.json();
+//       // .then((result) => result.json())
+//       // .then((r) => {
+//       dispatch({ type: "DOGSALL", payload: { dogs: r } });
+//       // });
+//     } catch (err) {
+//       console.log(err);
 //     }
 //   };
 // };
-
-export const SearchDog = (arg) => {
-  return async (dispatch) => {
-    fetch(`http://localhost:3001/dogs?name=${arg}`)
-    .then((result) => result.json())
-    .then((r) => {
-      dispatch({ type: "DOGSALL", payload: {dogs: r} });
-      });
-    }
-};
 
 export const GetTemps = () => {
   return function (dispatch) {

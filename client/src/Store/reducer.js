@@ -19,7 +19,6 @@ const reducer = (state = initialState, action) => {
     }
     case "SEARCHDOG": {
       state = initialState;
-      // console.log("searchDogs: ", action.payload.dogs)
       return {
         ...state,
         DogsState: state.DogsState.concat(action.payload.dogs),
@@ -47,6 +46,7 @@ const reducer = (state = initialState, action) => {
         Details: action.payload.detis,
       };
     }
+    
     //-----------------------------------------------------------------------------------------------
     case "FILTRATED": {
       function filterByTemp(elm, action) {
@@ -75,9 +75,8 @@ const reducer = (state = initialState, action) => {
     }
 
     case "FILTRATEDTYPE": {
-      // console.log(action.payload)
       if (action.payload === "ALL") {
-        state.Filtred = initialState; //esto esta bien aca?
+        state.Filtred = initialState;
         return {
           ...state,
           Filtred: state.DogsState,

@@ -38,7 +38,7 @@ export default function Create() {
     } else if (parseInt(inputs.minyears) > parseInt(inputs.maxyears)) {
       error.yearscomprobator = "minyears cannot be greater than maxyears";
     }
-    console.log("error:", JSON.stringify(error))
+    console.log("error:", JSON.stringify(error));
     return error;
   };
 
@@ -59,6 +59,23 @@ export default function Create() {
   }, [dispatch]);
 
   // console.log("CSMtemps", temps)
+  // const lasagna = (evt) => {
+  //   console.log(inputs.temp)
+
+  //   setInputs({
+  //     ...inputs,
+  //     [evt.target.name]: inputs.temp.concat(evt.target.value),
+  //   });
+  //   let count = inputs.temp.length
+  //   for (let i = 0; i < count; i++) {
+  //     if (evt.target.value === inputs.temp[i]) {
+  //       let index = inputs.temp.indexOf(evt.target.value)
+  //       inputs.temp.slice(index, 1)
+  //       console.log(index)
+  //       // evt.target.value && inputs.temp[i]
+  //     }
+  //   }
+  // };
 
   const handleSubmit = (e) => {
     console.log(inputs);
@@ -71,6 +88,7 @@ export default function Create() {
     let completeyears = [inputs.minyears, inputs.maxyears];
     completeyears = completeyears.join(" - ");
     completeyears = completeyears + " years ";
+
     let campana = {
       name: inputs.name,
       img: inputs.img,

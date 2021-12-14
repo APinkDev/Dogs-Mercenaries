@@ -1,10 +1,8 @@
 import React from "react";
 import {  useSelector } from "react-redux";
 import "./FiltedButton.css";
-// import { GetTemps useDispatch,} from "../Store/actions.js";
 
 export default function FiltedButton({ Filtred }) {
-//   const dispatch = useDispatch();
   const temps = useSelector((state) => state.DBTemps);
 
   const [buton, setButon] = React.useState([]);
@@ -12,24 +10,13 @@ export default function FiltedButton({ Filtred }) {
     e.target.disable = true;
 
     setButon((elm) => [...elm, e.target.value]);
-    // console.log("HOL! PEERO TU2: ",e.target.value, "buton2", buton)
   };
   const handleOnSubmit = (e) => {
-      // console.log(buton)
-    // for (let i = 0; i < e.target.length; i++) {
-    //   e.target[i].disable = false;
-    // }
-    Filtred(buton);
-    setButon([]);
+    setTimeout(() => {
+      Filtred(buton);
+      setButon([]);
+    },2000)
   };
-
-//   React.useEffect(() => {
-//     dispatch(GetTemps());
-//   }, [dispatch]);
-
-//   const temperam = temps.map((e) => (e))
-
-
 
   return (
     <div className="Filtred__div">

@@ -11,7 +11,7 @@ export default function AZbuttom({ Azbuttoms }) {
         <option value="DEFAULT" disabled>
           Sort by:
         </option>
-        <option value="">uwu</option>
+        <option value="">all</option>
         <option value="AZ">AZ</option>
         <option value="ZA">ZA</option>
         <option value="LowWeight">High Weight</option>
