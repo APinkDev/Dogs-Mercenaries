@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const DogsAll = () => {
   return async (dispatch) => {
-    const response = await axios.get(`http://localhost:3001/dogs`);
+    const response = await axios.get(`/dogs`);
     if (response?.data) {
       dispatch({
         type: "DOGSALL",
@@ -14,7 +14,7 @@ export const DogsAll = () => {
 
 export const SearchDog = (arg) => {
   return async (dispatch) => {
-    const response = await axios.get(`http://localhost:3001/dogs?name=${arg}`);
+    const response = await axios.get(`/dogs?name=${arg}`);
     if (response?.data) {
       dispatch({
         type: "DOGSALL",
@@ -27,7 +27,7 @@ export const SearchDog = (arg) => {
 // export const SearchDog = (arg) => { 
 //   return async (dispatch) => {
 //     try {
-//       const result = await fetch(`http://localhost:3001/dogs?name=${arg}`);
+//       const result = await fetch(`/dogs?name=${arg}`);
 //       const r = result.json();
 //       // .then((result) => result.json())
 //       // .then((r) => {
@@ -41,7 +41,7 @@ export const SearchDog = (arg) => {
 
 export const GetTemps = () => {
   return function (dispatch) {
-    fetch(`http://localhost:3001/temps`)
+    fetch(`/temps`)
       .then((result) => result.json())
       .then((r) => {
         dispatch({ type: "GETTEMPS", payload: r });
@@ -51,7 +51,7 @@ export const GetTemps = () => {
 
 export const DogsID = (id) => {
   return function (dispatch) {
-    fetch(`http://localhost:3001/dogs?name=${id}`)
+    fetch(`/dogs?name=${id}`)
       .then((result) => result.json())
       .then((r) => {
         dispatch({ type: "DOGSID", payload: r });
@@ -62,7 +62,7 @@ export const DogsID = (id) => {
 export const Detailed = (id) => {
   return async (dispatch) => {
     try {
-      const response = await axios.get(`http://localhost:3001/dogs/${id}`);
+      const response = await axios.get(`/dogs/${id}`);
       if (response?.data) {
         dispatch({ type: "DETAILED", payload: { detis: response.data } });
       }
@@ -74,7 +74,7 @@ export const Detailed = (id) => {
 
 export const Post = (inputs) => {
   return function (dispatch) {
-    fetch("http://localhost:3001/create", {
+    fetch("/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
