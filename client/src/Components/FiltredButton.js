@@ -15,7 +15,7 @@ export default function FiltedButton({ Filtred }) {
     setTimeout(() => {
       Filtred(buton);
       setButon([]);
-    },2000)
+    },5000)
   };
 
   return (
