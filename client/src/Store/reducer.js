@@ -29,14 +29,14 @@ const reducer = (state = initialState, action) => {
       state.DBTemps = state.DBTemps.slice(0, state.DBTemps.length - 1);
       return {
         ...state,
-        DBTemps: state.DBTemps.concat(action.payload),
+        DBTemps: state.DBTemps.concat(action.payload.dogs),
       };
     }
     case "DOGSID": {
       state = initialState;
       return {
         ...state,
-        DogsState: state.DogsState.concat(action.payload),
+        DogsState: state.DogsState.concat(action.payload.dogs),
       };
     }
     case "DETAILED": {
